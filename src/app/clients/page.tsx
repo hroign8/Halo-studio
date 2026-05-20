@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FiArrowRight } from "react-icons/fi";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Businesses We Work With — Halo Studio",
@@ -74,15 +75,16 @@ export default function ClientsPage() {
       <Navbar />
 
       {/* Page header */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "160px 32px 80px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-        }}
-        className="clients-page-header"
-      >
+      <ScrollReveal>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "160px 32px 80px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+          }}
+          className="clients-page-header"
+        >
         <p
           style={{
             fontSize: "11px",
@@ -132,17 +134,19 @@ export default function ClientsPage() {
           category, you don&apos;t show up. We build the landing page and run the ads that change
           that.
         </p>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* Sectors */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 32px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-        }}
-      >
+      <ScrollReveal delayMs={80}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "80px 32px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+          }}
+        >
         <p
           style={{
             fontSize: "11px",
@@ -192,22 +196,24 @@ export default function ClientsPage() {
             </div>
           ))}
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* Not a good fit */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 32px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "64px",
-          alignItems: "start",
-        }}
-        className="not-fit-grid"
-      >
+      <ScrollReveal delayMs={120}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "80px 32px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "64px",
+            alignItems: "start",
+          }}
+          className="not-fit-grid"
+        >
         <div>
           <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.25)", marginBottom: "16px" }}>
             Honesty first
@@ -250,17 +256,19 @@ export default function ClientsPage() {
             </li>
           ))}
         </ul>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* Bottom CTA */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 32px 100px",
-          textAlign: "center",
-        }}
-      >
+      <ScrollReveal delayMs={160}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "80px 32px 100px",
+            textAlign: "center",
+          }}
+        >
         <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.25)", marginBottom: "20px" }}>
           Sounds like you?
         </p>
@@ -309,7 +317,8 @@ export default function ClientsPage() {
           Start a conversation
           <FiArrowRight size={15} strokeWidth={2.5} />
         </Link>
-      </div>
+        </div>
+      </ScrollReveal>
 
       <Footer />
 

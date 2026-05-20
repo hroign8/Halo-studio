@@ -110,3 +110,33 @@
   opacity: 0.85;
   transform: translateY(-1px);
 }
+
+/* ── Scroll reveal ────────────────────────────────────── */
+.scroll-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.scroll-reveal.reveal-pending {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.68s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.68s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.reveal-pending.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.reveal-pending,
+  .scroll-reveal.reveal-pending.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

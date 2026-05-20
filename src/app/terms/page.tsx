@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Halo Studio",
@@ -14,6 +15,7 @@ export default function TermsPage() {
     <div className="min-h-screen bg-black flex flex-col">
       <Navbar />
       <main className="flex-1 px-6 md:px-10 pt-32 pb-24">
+      <ScrollReveal>
       <section className="max-w-3xl mx-auto">
         <p className="text-[11px] font-medium tracking-[0.28em] uppercase text-white/35 mb-5">
           Terms
@@ -97,6 +99,7 @@ export default function TermsPage() {
           ← Back to home
         </Link>
       </section>
+      </ScrollReveal>
     </main>
     <Footer />
     </div>

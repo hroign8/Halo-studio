@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { FiZap, FiGlobe, FiShoppingCart, FiBarChart2, FiHome, FiMonitor, FiUsers, FiThumbsUp, FiHeart } from "react-icons/fi";
 import { MdSportsEsports } from "react-icons/md";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Services — Halo Studio",
@@ -419,19 +420,20 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Page header */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "160px 32px 80px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "64px",
-          alignItems: "end",
-        }}
-        className="services-grid services-page-header"
-      >
+      <ScrollReveal>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "160px 32px 80px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "64px",
+            alignItems: "end",
+          }}
+          className="services-grid services-page-header"
+        >
         {/* Left: headline */}
         <div>
           <p
@@ -506,20 +508,21 @@ export default function ServicesPage() {
             </a>
           ))}
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* Service sections */}
-      {services.map((service) => (
-        <section
-          key={service.slug}
-          id={service.slug}
-          style={{
-            borderBottom: "1px solid rgba(255,255,255,0.07)",
-            padding: "80px 32px",
-            maxWidth: "1100px",
-            margin: "0 auto",
-          }}
-        >
+      {services.map((service, index) => (
+        <ScrollReveal key={service.slug} delayMs={100 + index * 70}>
+          <section
+            id={service.slug}
+            style={{
+              borderBottom: "1px solid rgba(255,255,255,0.07)",
+              padding: "80px 32px",
+              maxWidth: "1100px",
+              margin: "0 auto",
+            }}
+          >
           {/* Section header */}
           <div
             style={{
@@ -828,18 +831,20 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
-        </section>
+          </section>
+        </ScrollReveal>
       ))}
 
       {/* Bottom CTA */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 32px 120px",
-          textAlign: "center",
-        }}
-      >
+      <ScrollReveal delayMs={160}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "80px 32px 120px",
+            textAlign: "center",
+          }}
+        >
         <h2
           style={{
             fontSize: "clamp(2rem, 4vw, 3.5rem)",
@@ -880,7 +885,8 @@ export default function ServicesPage() {
         >
           Book a free discovery call ›
         </Link>
-      </div>
+        </div>
+      </ScrollReveal>
 
       <Footer />
 

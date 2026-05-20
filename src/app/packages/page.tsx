@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FiCheck, FiArrowRight } from "react-icons/fi";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Performance Marketing Packages Uganda — Halo Studio",
@@ -113,19 +114,20 @@ export default function PackagesPage() {
       <Navbar />
 
       {/* Page header */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "160px 32px 80px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "64px",
-          alignItems: "end",
-        }}
-        className="pkg-header-grid pkg-page-header"
-      >
+      <ScrollReveal>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "160px 32px 80px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "64px",
+            alignItems: "end",
+          }}
+          className="pkg-header-grid pkg-page-header"
+        >
         {/* Left */}
         <div>
           <p
@@ -214,17 +216,19 @@ export default function PackagesPage() {
             </div>
           ))}
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* Package cards */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 32px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-        }}
-      >
+      <ScrollReveal delayMs={70}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "80px 32px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+          }}
+        >
         <div
           style={{
             display: "grid",
@@ -425,22 +429,24 @@ export default function PackagesPage() {
           All prices in Ugandan Shillings. Ad spend budget is separate from management fees.
           Payment plans available on request.
         </p>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* FAQ */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 32px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-          display: "grid",
-          gridTemplateColumns: "1fr 2fr",
-          gap: "64px",
-          alignItems: "start",
-        }}
-        className="pkg-faq-grid"
-      >
+      <ScrollReveal delayMs={110}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "80px 32px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+            display: "grid",
+            gridTemplateColumns: "1fr 2fr",
+            gap: "64px",
+            alignItems: "start",
+          }}
+          className="pkg-faq-grid"
+        >
         <div>
           <p
             style={{
@@ -501,17 +507,19 @@ export default function PackagesPage() {
             </div>
           ))}
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* Bottom CTA */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "80px 32px 100px",
-          textAlign: "center",
-        }}
-      >
+      <ScrollReveal delayMs={150}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "80px 32px 100px",
+            textAlign: "center",
+          }}
+        >
         <p
           style={{
             fontSize: "11px",
@@ -567,7 +575,8 @@ export default function PackagesPage() {
           Book a free discovery call
           <FiArrowRight size={15} strokeWidth={2.5} />
         </Link>
-      </div>
+        </div>
+      </ScrollReveal>
 
       <Footer />
 

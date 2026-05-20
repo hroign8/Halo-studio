@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Contact — Halo Studio",
@@ -15,15 +16,16 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Page header */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "160px 32px 64px",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
-        }}
-        className="contact-page-header"
-      >
+      <ScrollReveal>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "160px 32px 64px",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+          }}
+          className="contact-page-header"
+        >
         <p
           style={{
             fontSize: "11px",
@@ -71,21 +73,23 @@ export default function ContactPage() {
           Tell us about your business and where you want it to go. We&apos;ll come back with a
           clear plan, not a sales pitch.
         </p>
-      </div>
+        </div>
+      </ScrollReveal>
 
       {/* Form section */}
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "64px 32px 100px",
-          display: "grid",
-          gridTemplateColumns: "1fr 1.4fr",
-          gap: "80px",
-          alignItems: "start",
-        }}
-        className="contact-grid"
-      >
+      <ScrollReveal delayMs={90}>
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "64px 32px 100px",
+            display: "grid",
+            gridTemplateColumns: "1fr 1.4fr",
+            gap: "80px",
+            alignItems: "start",
+          }}
+          className="contact-grid"
+        >
         {/* Left — context */}
         <div>
           <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
@@ -176,7 +180,8 @@ export default function ContactPage() {
 
         {/* Right — form */}
         <ContactForm />
-      </div>
+        </div>
+      </ScrollReveal>
 
       <Footer />
 
